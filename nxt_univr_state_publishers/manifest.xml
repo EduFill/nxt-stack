@@ -1,0 +1,27 @@
+<package>
+  <description brief="nxt_univr_state_publisher">
+
+     nxt_univr_state_publisher
+
+  </description>
+  <author>Marco Ruzzenente, Moreno Koo</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/my_state_publisher</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="nxt_ros"/>
+  <depend package="kdl_parser" />
+  <depend package="sensor_msgs" />
+  <depend package="tf" />
+  <depend package="tf_conversions" />
+  <depend package="nav_msgs"/>
+
+  
+  <export>
+    <cpp cflags="-I${prefix}/include/" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lrobot_state_publisher" />
+  </export>
+
+</package>
+
+

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+  <!-- NXT -->
+  <include file="$(find corso_inv)/launch/modules/nxt_base.launch" />
+  
+  <!-- States aggregator and parameters -->
+  <param name="mobile" value="true" type="String" />
+  <include file="$(find corso_inv)/launch/modules/joint_states_aggregator.launch" />
+  
+  <!-- Controller -->
+  <!-- POSITION CONTROLLER -->
+  <include file="$(find corso_inv)/launch/modules/base_controller.launch" />
+
+  <!-- TF publisher -->
+  <include file="$(find corso_inv)/launch/modules/base_publisher.launch" />
+
+  <!-- IPC -->
+  <include file="$(find corso_inv)/launch/modules/ipc_base.launch" />
+
+  <!-- RVIZ -->
+  <include file="$(find corso_inv)/launch/modules/rviz_base.launch" />
+
+</launch>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+    <node pkg="nxt_ros" name="nxt_ros_arm" type="nxt_ros.py"  output="screen" respawn="true">
+        <rosparam command="load" file="$(find corso_inv)/yaml/lego_arm.yaml" />
+    </node>
+</launch>

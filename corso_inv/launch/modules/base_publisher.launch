@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<launch>
+    <node pkg="nxt_univr_state_publishers" name="base_odometry_publisher" type="odometry_publisher" output="screen" />
+    <node pkg="nxt_univr_state_publishers" type="base_publisher" name="base_state_publisher" />
+</launch>

@@ -1,0 +1,19 @@
+<package>
+  <description brief="nxt_univr_controllers">
+
+     nxt_univr_controllers
+
+  </description>
+  <author>Marco Ruzzenente, Moreno Koo</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/my_nxt_controllers</url>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+  <depend package="nxt_ros"/>
+  <depend package="nav_msgs"/>
+  <depend package="tf"/>
+
+</package>
+
+

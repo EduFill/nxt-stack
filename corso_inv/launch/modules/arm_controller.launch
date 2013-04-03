@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+
+<launch>
+    <node pkg="nxt_univr_controllers" type="univr_arm_controller.py" name="arm_controller"  output="screen" />
+</launch>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node pkg="nxt_univr_controllers" name="base_position_controller" type="univr_base_position_controller.py" />
+  <node pkg="nxt_univr_controllers" name="base_velocity_controller" type="univr_base_velocity_controller.py" />
+  <node pkg="nxt_univr_controllers" name="controller_switch" type="univr_controller_switch.py" />
+</launch>
+

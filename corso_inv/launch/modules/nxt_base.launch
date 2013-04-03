@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<launch>
+    <node pkg="nxt_ros" name="nxt_ros_base" type="nxt_ros.py"  output="screen" respawn="true">
+        <rosparam command="load" file="$(find corso_inv)/yaml/lego_base.yaml" />
+    </node>
+    
+    <param name="base_parameters/r_wheel_joint" value="motor_joint_right" type="str" />
+    <param name="base_parameters/l_wheel_joint" value="motor_joint_left" type="str" />
+    <param name="base_parameters/wheel_radius" value="0.028" type="double" />
+    <param name="base_parameters/wheel_basis" value="0.0625" type="double" />
+    <param name="base_parameters/vel_to_eff" value="0.1" type="double" />
+
+    
+</launch>
+
