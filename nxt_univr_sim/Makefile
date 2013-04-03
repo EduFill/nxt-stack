@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/k12/EduFill/verona/univr-lego-fuerte/univr_lego_stack/nxt_univr_state_publishers
+CMAKE_SOURCE_DIR = /home/k12/EduFill/verona/univr-lego-fuerte/univr_lego_stack/nxt_univr_sim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/k12/EduFill/verona/univr-lego-fuerte/univr_lego_stack/nxt_univr_state_publishers
+CMAKE_BINARY_DIR = /home/k12/EduFill/verona/univr-lego-fuerte/univr_lego_stack/nxt_univr_sim
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/k12/EduFill/verona/univr-lego-fuerte/univr_lego_stack/nxt_univr_state_publishers/CMakeFiles /home/k12/EduFill/verona/univr-lego-fuerte/univr_lego_stack/nxt_univr_state_publishers/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/k12/EduFill/verona/univr-lego-fuerte/univr_lego_stack/nxt_univr_sim/CMakeFiles /home/k12/EduFill/verona/univr-lego-fuerte/univr_lego_stack/nxt_univr_sim/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/k12/EduFill/verona/univr-lego-fuerte/univr_lego_stack/nxt_univr_state_publishers/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/k12/EduFill/verona/univr-lego-fuerte/univr_lego_stack/nxt_univr_sim/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -151,32 +151,6 @@ ROSBUILD_gensrv_lisp/fast:
 .PHONY : ROSBUILD_gensrv_lisp/fast
 
 #=============================================================================
-# Target rules for targets named arm_publisher
-
-# Build rule for target.
-arm_publisher: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 arm_publisher
-.PHONY : arm_publisher
-
-# fast build rule for target.
-arm_publisher/fast:
-	$(MAKE) -f CMakeFiles/arm_publisher.dir/build.make CMakeFiles/arm_publisher.dir/build
-.PHONY : arm_publisher/fast
-
-#=============================================================================
-# Target rules for targets named base_publisher
-
-# Build rule for target.
-base_publisher: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 base_publisher
-.PHONY : base_publisher
-
-# fast build rule for target.
-base_publisher/fast:
-	$(MAKE) -f CMakeFiles/base_publisher.dir/build.make CMakeFiles/base_publisher.dir/build
-.PHONY : base_publisher/fast
-
-#=============================================================================
 # Target rules for targets named clean-test-results
 
 # Build rule for target.
@@ -190,43 +164,17 @@ clean-test-results/fast:
 .PHONY : clean-test-results/fast
 
 #=============================================================================
-# Target rules for targets named joint_states_aggregator
+# Target rules for targets named nxt_arm_sim
 
 # Build rule for target.
-joint_states_aggregator: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 joint_states_aggregator
-.PHONY : joint_states_aggregator
+nxt_arm_sim: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nxt_arm_sim
+.PHONY : nxt_arm_sim
 
 # fast build rule for target.
-joint_states_aggregator/fast:
-	$(MAKE) -f CMakeFiles/joint_states_aggregator.dir/build.make CMakeFiles/joint_states_aggregator.dir/build
-.PHONY : joint_states_aggregator/fast
-
-#=============================================================================
-# Target rules for targets named nxt_univr_state_publishers
-
-# Build rule for target.
-nxt_univr_state_publishers: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nxt_univr_state_publishers
-.PHONY : nxt_univr_state_publishers
-
-# fast build rule for target.
-nxt_univr_state_publishers/fast:
-	$(MAKE) -f CMakeFiles/nxt_univr_state_publishers.dir/build.make CMakeFiles/nxt_univr_state_publishers.dir/build
-.PHONY : nxt_univr_state_publishers/fast
-
-#=============================================================================
-# Target rules for targets named odometry_publisher
-
-# Build rule for target.
-odometry_publisher: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 odometry_publisher
-.PHONY : odometry_publisher
-
-# fast build rule for target.
-odometry_publisher/fast:
-	$(MAKE) -f CMakeFiles/odometry_publisher.dir/build.make CMakeFiles/odometry_publisher.dir/build
-.PHONY : odometry_publisher/fast
+nxt_arm_sim/fast:
+	$(MAKE) -f CMakeFiles/nxt_arm_sim.dir/build.make CMakeFiles/nxt_arm_sim.dir/build
+.PHONY : nxt_arm_sim/fast
 
 #=============================================================================
 # Target rules for targets named rosbuild_precompile
@@ -359,94 +307,19 @@ tests/fast:
 .PHONY : tests/fast
 
 # target to build an object file
-src/robot_state_publisher.o:
-	$(MAKE) -f CMakeFiles/nxt_univr_state_publishers.dir/build.make CMakeFiles/nxt_univr_state_publishers.dir/src/robot_state_publisher.o
-.PHONY : src/robot_state_publisher.o
+src/univr_arm_sim.o:
+	$(MAKE) -f CMakeFiles/nxt_arm_sim.dir/build.make CMakeFiles/nxt_arm_sim.dir/src/univr_arm_sim.o
+.PHONY : src/univr_arm_sim.o
 
 # target to preprocess a source file
-src/robot_state_publisher.i:
-	$(MAKE) -f CMakeFiles/nxt_univr_state_publishers.dir/build.make CMakeFiles/nxt_univr_state_publishers.dir/src/robot_state_publisher.i
-.PHONY : src/robot_state_publisher.i
+src/univr_arm_sim.i:
+	$(MAKE) -f CMakeFiles/nxt_arm_sim.dir/build.make CMakeFiles/nxt_arm_sim.dir/src/univr_arm_sim.i
+.PHONY : src/univr_arm_sim.i
 
 # target to generate assembly for a file
-src/robot_state_publisher.s:
-	$(MAKE) -f CMakeFiles/nxt_univr_state_publishers.dir/build.make CMakeFiles/nxt_univr_state_publishers.dir/src/robot_state_publisher.s
-.PHONY : src/robot_state_publisher.s
-
-# target to build an object file
-src/treefksolverposfull_recursive.o:
-	$(MAKE) -f CMakeFiles/nxt_univr_state_publishers.dir/build.make CMakeFiles/nxt_univr_state_publishers.dir/src/treefksolverposfull_recursive.o
-.PHONY : src/treefksolverposfull_recursive.o
-
-# target to preprocess a source file
-src/treefksolverposfull_recursive.i:
-	$(MAKE) -f CMakeFiles/nxt_univr_state_publishers.dir/build.make CMakeFiles/nxt_univr_state_publishers.dir/src/treefksolverposfull_recursive.i
-.PHONY : src/treefksolverposfull_recursive.i
-
-# target to generate assembly for a file
-src/treefksolverposfull_recursive.s:
-	$(MAKE) -f CMakeFiles/nxt_univr_state_publishers.dir/build.make CMakeFiles/nxt_univr_state_publishers.dir/src/treefksolverposfull_recursive.s
-.PHONY : src/treefksolverposfull_recursive.s
-
-# target to build an object file
-src/univr_arm_publisher.o:
-	$(MAKE) -f CMakeFiles/arm_publisher.dir/build.make CMakeFiles/arm_publisher.dir/src/univr_arm_publisher.o
-.PHONY : src/univr_arm_publisher.o
-
-# target to preprocess a source file
-src/univr_arm_publisher.i:
-	$(MAKE) -f CMakeFiles/arm_publisher.dir/build.make CMakeFiles/arm_publisher.dir/src/univr_arm_publisher.i
-.PHONY : src/univr_arm_publisher.i
-
-# target to generate assembly for a file
-src/univr_arm_publisher.s:
-	$(MAKE) -f CMakeFiles/arm_publisher.dir/build.make CMakeFiles/arm_publisher.dir/src/univr_arm_publisher.s
-.PHONY : src/univr_arm_publisher.s
-
-# target to build an object file
-src/univr_base_publisher.o:
-	$(MAKE) -f CMakeFiles/base_publisher.dir/build.make CMakeFiles/base_publisher.dir/src/univr_base_publisher.o
-.PHONY : src/univr_base_publisher.o
-
-# target to preprocess a source file
-src/univr_base_publisher.i:
-	$(MAKE) -f CMakeFiles/base_publisher.dir/build.make CMakeFiles/base_publisher.dir/src/univr_base_publisher.i
-.PHONY : src/univr_base_publisher.i
-
-# target to generate assembly for a file
-src/univr_base_publisher.s:
-	$(MAKE) -f CMakeFiles/base_publisher.dir/build.make CMakeFiles/base_publisher.dir/src/univr_base_publisher.s
-.PHONY : src/univr_base_publisher.s
-
-# target to build an object file
-src/univr_joint_states_aggregator.o:
-	$(MAKE) -f CMakeFiles/joint_states_aggregator.dir/build.make CMakeFiles/joint_states_aggregator.dir/src/univr_joint_states_aggregator.o
-.PHONY : src/univr_joint_states_aggregator.o
-
-# target to preprocess a source file
-src/univr_joint_states_aggregator.i:
-	$(MAKE) -f CMakeFiles/joint_states_aggregator.dir/build.make CMakeFiles/joint_states_aggregator.dir/src/univr_joint_states_aggregator.i
-.PHONY : src/univr_joint_states_aggregator.i
-
-# target to generate assembly for a file
-src/univr_joint_states_aggregator.s:
-	$(MAKE) -f CMakeFiles/joint_states_aggregator.dir/build.make CMakeFiles/joint_states_aggregator.dir/src/univr_joint_states_aggregator.s
-.PHONY : src/univr_joint_states_aggregator.s
-
-# target to build an object file
-src/univr_odometry_publisher.o:
-	$(MAKE) -f CMakeFiles/odometry_publisher.dir/build.make CMakeFiles/odometry_publisher.dir/src/univr_odometry_publisher.o
-.PHONY : src/univr_odometry_publisher.o
-
-# target to preprocess a source file
-src/univr_odometry_publisher.i:
-	$(MAKE) -f CMakeFiles/odometry_publisher.dir/build.make CMakeFiles/odometry_publisher.dir/src/univr_odometry_publisher.i
-.PHONY : src/univr_odometry_publisher.i
-
-# target to generate assembly for a file
-src/univr_odometry_publisher.s:
-	$(MAKE) -f CMakeFiles/odometry_publisher.dir/build.make CMakeFiles/odometry_publisher.dir/src/univr_odometry_publisher.s
-.PHONY : src/univr_odometry_publisher.s
+src/univr_arm_sim.s:
+	$(MAKE) -f CMakeFiles/nxt_arm_sim.dir/build.make CMakeFiles/nxt_arm_sim.dir/src/univr_arm_sim.s
+.PHONY : src/univr_arm_sim.s
 
 # Help Target
 help:
@@ -458,13 +331,9 @@ help:
 	@echo "... ROSBUILD_genmsg_lisp"
 	@echo "... ROSBUILD_gensrv_cpp"
 	@echo "... ROSBUILD_gensrv_lisp"
-	@echo "... arm_publisher"
-	@echo "... base_publisher"
 	@echo "... clean-test-results"
 	@echo "... edit_cache"
-	@echo "... joint_states_aggregator"
-	@echo "... nxt_univr_state_publishers"
-	@echo "... odometry_publisher"
+	@echo "... nxt_arm_sim"
 	@echo "... rebuild_cache"
 	@echo "... rosbuild_precompile"
 	@echo "... rosbuild_premsgsrvgen"
@@ -476,24 +345,9 @@ help:
 	@echo "... test-results"
 	@echo "... test-results-run"
 	@echo "... tests"
-	@echo "... src/robot_state_publisher.o"
-	@echo "... src/robot_state_publisher.i"
-	@echo "... src/robot_state_publisher.s"
-	@echo "... src/treefksolverposfull_recursive.o"
-	@echo "... src/treefksolverposfull_recursive.i"
-	@echo "... src/treefksolverposfull_recursive.s"
-	@echo "... src/univr_arm_publisher.o"
-	@echo "... src/univr_arm_publisher.i"
-	@echo "... src/univr_arm_publisher.s"
-	@echo "... src/univr_base_publisher.o"
-	@echo "... src/univr_base_publisher.i"
-	@echo "... src/univr_base_publisher.s"
-	@echo "... src/univr_joint_states_aggregator.o"
-	@echo "... src/univr_joint_states_aggregator.i"
-	@echo "... src/univr_joint_states_aggregator.s"
-	@echo "... src/univr_odometry_publisher.o"
-	@echo "... src/univr_odometry_publisher.i"
-	@echo "... src/univr_odometry_publisher.s"
+	@echo "... src/univr_arm_sim.o"
+	@echo "... src/univr_arm_sim.i"
+	@echo "... src/univr_arm_sim.s"
 .PHONY : help
 
 

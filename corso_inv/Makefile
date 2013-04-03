@@ -8,7 +8,7 @@ default_target: all
 #=============================================================================
 # Special targets provided by cmake.
 
-# Disable implicit rules so canoncical targets will work.
+# Disable implicit rules so canonical targets will work.
 .SUFFIXES:
 
 # Remove some rules from gmake that .SUFFIXES does not remove.
@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/k/lego/corso_inv
+CMAKE_SOURCE_DIR = /home/k12/EduFill/verona/univr-lego-fuerte/univr_lego_stack/corso_inv
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/k/lego/corso_inv
+CMAKE_BINARY_DIR = /home/k12/EduFill/verona/univr-lego-fuerte/univr_lego_stack/corso_inv
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/k/lego/corso_inv/CMakeFiles /home/k/lego/corso_inv/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/k12/EduFill/verona/univr-lego-fuerte/univr_lego_stack/corso_inv/CMakeFiles /home/k12/EduFill/verona/univr-lego-fuerte/univr_lego_stack/corso_inv/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/k/lego/corso_inv/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/k12/EduFill/verona/univr-lego-fuerte/univr_lego_stack/corso_inv/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
