@@ -17,9 +17,6 @@
   <!-- TF publisher -->
   <include file="$(find corso_inv)/launch/modules/arm_publisher.launch" />
 
-  <!-- IPC -->
-  <include file="$(find corso_inv)/launch/modules/ipc_arm.launch" />
-
   <!-- RVIZ -->
   <include file="$(find corso_inv)/launch/modules/rviz_arm.launch" />
 
