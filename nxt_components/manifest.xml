@@ -1,0 +1,17 @@
+<package>
+  <description brief="nxt_components">
+
+     nxt_components
+
+  </description>
+  <author>k12</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/nxt_components</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="nxt_ros"/>
+
+</package>
+
+
