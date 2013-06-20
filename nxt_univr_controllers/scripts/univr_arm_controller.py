@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-import roslib; roslib.load_manifest('nxt_controllers')  
 import rospy
+import roslib; roslib.load_manifest('nxt_univr_controllers')  
 import math
 import thread
 from sensor_msgs.msg import JointState
@@ -67,11 +67,14 @@ class JointPositionController:
       self.motor1pos_desi = msg.position[0]
       #print 'Setpoint callback triggered from msg name %s: %f;'%(self.motor1name, self.motor1pos_desi)
     
-    if msg.name[0] == self.motor2name:
-      self.motor2pos_desi = msg.position[0]
+    if msg.name[1] == self.motor2name:
+      self.motor2pos_desi = msg.position[1]
+      #print 'Setpoint callback triggered from msg name %s: %f;'%(self.motor2name, self.motor2pos_desi)
     
-    if msg.name[0] == self.motor3name:
-      self.motor3pos_desi = msg.position[0]
+    if msg.name[2] == self.motor3name:
+      self.motor3pos_desi = msg.position[2]
+      #print 'Setpoint callback triggered from msg name %s: %f;'%(self.motor3name, self.motor3pos_desi)
+    
 
   def jnt_state_cb(self, msg):
     for name, pos, vel in zip(msg.name, msg.position, msg.velocity):
