@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-
-<launch>
-        
-    <node pkg="rviz" name="rviz" type="rviz" />
-  
-    <arg name="gui" default="True" />
-    <param name="robot_description" textfile="$(find corso_inv)/urdf/lego_base.urdf"/>
-</launch>

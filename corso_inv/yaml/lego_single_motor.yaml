@@ -1,5 +1,0 @@
-nxt_robot:
-  - type: motor
-    name: arm_joint_1
-    port: PORT_A
-    desired_frequency: 60.0

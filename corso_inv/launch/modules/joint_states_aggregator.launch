@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-
-<launch>
-  <node pkg="nxt_univr_state_publishers" type="joint_states_aggregator" name="joint_states_aggregator" />   
-</launch>
