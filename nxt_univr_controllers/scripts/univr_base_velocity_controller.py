@@ -43,6 +43,7 @@ from nxt_msgs.msg import Range, JointCommand
 class BaseController:
     def __init__(self):
         self.initialized = False
+        self.isActive = True
         self.vel_rot_desi = 0
         self.vel_trans_desi = 0
         self.vel_trans = 0
@@ -57,29 +58,18 @@ class BaseController:
         self.vel_to_eff = rospy.get_param(self.ns +'vel_to_eff', 0.5)
         self.k_rot = 0.075/self.vel_to_eff
         self.k_trans = 0.055/self.vel_to_eff
-        
-        # controllers switch
-        self.isActive = False
 
         # joint interaction
         self.pub = rospy.Publisher('joint_command', JointCommand)
         # joint_states feedback
         rospy.Subscriber('joint_states', JointState, self.jnt_state_cb)
         # base commands
-        rospy.Subscriber('velocity_setpoint', Twist, self.cmd_vel_cb)
-        # controller swtich subscriber
-        rospy.Subscriber('position_setpoint', JointState, self.controller_status_callback)
-        
-    def controller_status_callback(self, msg):
-    #If I receive a position setpoint, then velocity control is not needed
-      self.isActive = False
-      self.initialized = False
+        rospy.Subscriber('cmd_vel', Twist, self.cmd_vel_cb)
         
     def cmd_vel_cb(self, msg):
-      self.isActive = True
+      self.initialized = True
       self.vel_rot_desi = msg.angular.z
       self.vel_trans_desi = msg.linear.x
-      self.initialized = True
 
     def jnt_state_cb(self, msg):
       if self.isActive:
@@ -114,7 +104,7 @@ class BaseController:
 
 
 def main():
-    rospy.init_node('nxt_base_controller')
+    rospy.init_node('nxt_base_velocity_controller')
     base_controller = BaseController()
     rospy.spin()
 
